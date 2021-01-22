@@ -1,0 +1,89 @@
+        .bg-p-cover {
+            background-repeat: repeat-y;
+            background-size: 100%;
+            background-image: url("../imgs/fondo_sm.jpg");
+        }
+        
+h2.card-title{
+  font-size:1.5rem;
+}
+
+        
+nav a {
+    font-size: large;
+    position:relative;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+    -webkit-transition:0.5s;
+    color: #fff;
+  }
+  
+  nav a:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  nav a:hover:before{
+    transition-delay: .2s;
+  }
+  
+  nav a::before{
+    width: 0%;
+    height:100%;
+    z-index: 3;
+    content:'';
+    position: absolute;
+    bottom:-1px;
+    right:50%;
+    box-sizing: border-box;
+    transition: .2s;
+  }
+  
+  nav a:hover::before {
+    width: 100% !important;
+    right: 0;
+    transition: .7s;
+  }
+  
+  nav a::before {
+    border-bottom: 2px solid #fff;
+  }
+
+        
+        
+        @media (min-width:768px) {
+            .bg-p-cover {
+                background-size: 100%;
+                background-image: url("../imgs/fondo_md.jpg");
+            }
+        }
+        
+        @media (min-width:1200px) {
+            .bg-p-cover {
+                background-image: url("../imgs/fondo_lg.jpg");
+            }
+        }
+        
+        @keyframes bganimate {
+            50% {
+                background-position: top right;
+            }
+        }
+
+ .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
